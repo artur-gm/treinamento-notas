@@ -1,0 +1,44 @@
+<head>
+    <title>Notas</title>
+</head>
+<body>
+<div class="container">
+    <div layout:fragment="content">
+        <h1>Dados do Usuário</h1>
+        <div class="text-right">
+            <a class="btn btn-primary" href="./lista.html" th:href="@{/usuario}" role="button" title="Listar usuários">Listar usuários</a>
+        </div>
+        <br>
+        <form action="#" th:object="${usuario}" method="post">
+            <table class="table">
+                <tbody>
+                <input type="hidden" name="status" id="status" value="2">
+                <tr>
+                    <th scope="row">
+                        <label for="cpf" class="col-sm-2 col-form-label">CPF:</label>
+                    </th>
+                    <td>
+                        <div class="col-sm-4">
+                            <input type="cpf" class="form-control" id="cpf" placeholder="">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <label for="nome" class="col-sm-2 col-form-label">Nome:</label>
+                    </th>
+                    <td>
+                        <div class="col-sm-4">
+                            <input type="nome" class="form-control" id="nome" placeholder="">
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="text-right">
+                <input type="submit" value="Enviar">
+            </div>
+        </form>
+    </div>
+</div>
+</body>

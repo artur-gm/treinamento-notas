@@ -10,14 +10,16 @@ import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 @RequestMapping("/usuario")
 public class UsuarioController {
+    
     @Autowired
-    UsuarioRepository usuarioRepository;
+    private UsuarioRepository usuarioRepository;
 
     @GetMapping("")
     public String index(){
@@ -31,7 +33,7 @@ public class UsuarioController {
     }
 
     @PostMapping(value = "/validate")
-    public String validateForm(@Validated Usuario usuario, BindingResult result){
+    public String validateForm(@RequestBody Usuario usuario, BindingResult result){
         if(result.hasErrors()){
             return "usuario/new";
         }
