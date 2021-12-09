@@ -1,2 +1,58 @@
-<h1>HELLO WORLD</h1>
-<a href="/usuario/new">new</a>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/default}">
+<head>
+    <title>Notas</title>
+    <link rel="stylesheet" href="/css/application.css" />
+</head>
+
+<body class="corpo">
+    <div class="container">
+        <div layout:fragment="content">
+        
+        <h1>Usuarios</h1>
+        <div class="text-right">
+            <a class="btn btn-primary my-btn" id="new" href="./new.html" th:href="@{/usuario/new}" role="button" title="Adicionar usuario">Adicionar Usuario</a>
+        </div>
+    </br>
+    <table class="table tabela" id="tabelaUsuarios">
+        <thead class="thead-light">
+        <tr>
+            <th>CPF</th>
+            <th>Nome</th>
+            <th>Ações</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr style="cursor:pointer" href="#"
+                th:each="usuario: ${usuarios}">
+                <td th:text="${usuario.cpf}"></td>
+                <td th:text="${usuario.nome}">
+
+                </td>
+                <td>
+                    <a class="btn btn-primary my-btn" id="botao-alterar"   role="button" href="#"
+                       th:href="@{usuario/{id}/edit(id=${usuario.idUsuario})}"
+                       >Alterar</a>
+                    <a class="btn btn-danger my-btn delete" href="#"
+                       th:data-id="${usuario.idUsuario}"
+                       role="button" id="delete" title="Deletar usuario">Deletar</a>
+                       <!--TODO: Alert pra confirmar deleção-->
+                </td>
+            </tr>
+            </tbody>
+
+    </table>
+        
+    </div>    
+    </div>    
+</body>
+
+<script src=https://code.jquery.com/jquery-3.6.0.min.js></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<div layout:fragment="javascript">
+    <script src="../../static/js/usuario/new.js" th:src="@{/js/usuario/new.js}"></script>
+    <script src="../../static/js/usuario/delete.js" th:src="@{/js/usuario/delete.js}"></script>
+</div>
+</html>

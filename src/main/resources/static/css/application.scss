@@ -1,0 +1,59 @@
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+// Include any default variable overrides here (though functions won't be available)
+
+@import "../../../../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../../../../../node_modules/nord/src/sass/nord.scss";
+
+
+// Then add additional custom code here
+
+.corpo{
+    background-color: $nord0;
+    color: $nord4
+    
+}
+
+.formulario{
+    background-color: $nord2;
+    color: $nord4;
+    border: $nord1;
+    &:focus{
+        background-color: $nord3;
+        color: $nord4;
+        border: $nord1;
+        box-shadow: none;
+    }
+}
+
+.my-btn{
+    background-color: $nord7;
+    color: $nord0;
+    border: $nord1;
+    &:hover{
+        background-color: $nord5;
+        color: $nord0;
+    }
+    &#new{
+        background-color: $nord8;
+        color: $nord0;
+        &:hover{
+            background-color: $nord14;
+            color: $nord0;
+        }
+    }
+    &#delete{
+        background-color: $nord11;
+        color: $nord0;
+    }
+}
+
+.tabela{
+    background-color: $nord1;
+    color: $nord4;
+    border: 1px solid $nord2;
+}
+th, td{
+    border: 1px solid $nord2;
+}
