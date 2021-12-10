@@ -1,6 +1,8 @@
 package com.uff.notas.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.Column;
@@ -13,6 +15,7 @@ import javax.persistence.Table;
 @Getter
 @Setter
 @Entity
+@NoArgsConstructor
 @Table(name="Usuario")
 public class Usuario {
 
@@ -32,6 +35,5 @@ public class Usuario {
         this.nome = nome;
     }
 
-    public Usuario (){}
-    
+        
 }
