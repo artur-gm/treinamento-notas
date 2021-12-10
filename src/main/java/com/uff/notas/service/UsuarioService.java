@@ -34,4 +34,11 @@ public class UsuarioService {
         uRepository.deleteById(idUsuario);        
     }
 
+    public Usuario getUsuario(Long idUsuario) {
+        if (uRepository.existsById(idUsuario)){
+            return uRepository.findById(idUsuario).get();
+        }
+        return null;
+    }
+
 }
