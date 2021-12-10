@@ -1,12 +1,12 @@
 $(".edit").click((e)=>{
-    let id = $(e.currentTarget).data("id");
+    let idUsuario = document.querySelector('#idUsuario').value;
     let nome = document.querySelector('#nome').value;
     let cpf = document.querySelector('#cpf').value;
 
     let usuario = {
         nome: nome,
         cpf: cpf,
-        idUsuario: id
+        idUsuario: idUsuario
     };
 
     $.ajax({
