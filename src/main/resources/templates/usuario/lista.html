@@ -21,6 +21,10 @@
         <tr>
             <th>CPF</th>
             <th>Nome</th>
+            <th>RG</th>
+            <th>Endereço</th>
+            <th>Telefone</th>
+            <th>E-mail</th>
             <th>Ações</th>
         </tr>
         </thead>
@@ -29,6 +33,10 @@
                 th:each="usuario: ${usuarios}">
                 <td th:text="${usuario.cpf}"></td>
                 <td th:text="${usuario.nome}">
+                <td th:text="${usuario.rg}">
+                <td th:text="${usuario.endereco}">
+                <td th:text="${usuario.telefone}">
+                <td th:text="${usuario.email}">
 
                 </td>
                 <td>
@@ -52,7 +60,6 @@
 <script src=https://code.jquery.com/jquery-3.6.0.min.js></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <div layout:fragment="javascript">
-    <script src="../../static/js/usuario/new.js" th:src="@{/js/usuario/new.js}"></script>
     <script src="../../static/js/usuario/delete.js" th:src="@{/js/usuario/delete.js}"></script>
 </div>
 </html>
