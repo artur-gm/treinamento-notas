@@ -17,5 +17,8 @@ public class Materia {
 
     @Column(name = "nome")
     private String nome;
+
+    @Column(name = "descricao")
+    private String descricao;
     
 }
