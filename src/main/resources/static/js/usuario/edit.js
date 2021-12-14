@@ -2,11 +2,19 @@ $(".edit").click((e)=>{
     let idUsuario = document.querySelector('#idUsuario').value;
     let nome = document.querySelector('#nome').value;
     let cpf = document.querySelector('#cpf').value;
+    let rg = document.querySelector('#rg').value;
+    let endereco = document.querySelector('#endereco').value;
+    let telefone = document.querySelector('#telefone').value;
+    let email = document.querySelector('#email').value;
 
     let usuario = {
         nome: nome,
         cpf: cpf,
-        idUsuario: idUsuario
+        idUsuario: idUsuario,
+        rg: rg,
+        endereco: endereco,
+        telefone: telefone,
+        email: email
     };
 
     $.ajax({

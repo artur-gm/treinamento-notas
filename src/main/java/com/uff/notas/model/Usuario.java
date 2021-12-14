@@ -30,9 +30,26 @@ public class Usuario {
     @Column(name="nome")
     private String nome;
 
-    public Usuario (String cpf, String nome){
+    @Column(name = "rg")
+    private String rg;
+
+    @Column(name = "endereco")
+    private String endereco;
+
+    @Column(name = "telefone")
+    private String telefone;
+
+    @Column(name = "email")
+    private String email;
+
+
+    public Usuario (String cpf, String nome, String rg, String endereco, String telefone, String email){
         this.cpf = cpf;
         this.nome = nome;
+        this.rg = rg;
+        this.endereco = endereco;
+        this.telefone = telefone;
+        this.email = email;
     }
 
         
