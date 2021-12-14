@@ -4,7 +4,7 @@
       layout:decorate="~{layout/default}">
 <head>
     <title>Notas</title>
-    <link rel="stylesheet" href="/css/application.min.css" />
+    <link rel="stylesheet" href="/css/application.css" />
 </head>
 
 <body class="corpo">
@@ -33,10 +33,10 @@
                 </td>
                 <td>
                     <a class="btn btn-primary my-btn" id="botao-alterar"   role="button" href="#"
-                       th:href="@{materia/{id}/edit(id=${materiaidmateria})}"
+                       th:href="@{materia/{id}/edit(id=${materia.idMateria})}"
                        >Alterar</a>
                     <a class="btn btn-danger my-btn delete" href="#"
-                       th:data-id="${materiaidmateria}"
+                       th:data-id="${materia.idMateria}"
                        role="button" id="delete" title="Deletar materia">Deletar</a>
                        <!--TODO: Alert pra confirmar deleção-->
                 </td>
