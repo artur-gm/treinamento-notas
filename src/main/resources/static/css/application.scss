@@ -54,6 +54,14 @@ body{
             color: $nord1;
         }
     }
+    &#edit{
+        background-color: $nord8;
+        color: $nord0;
+        &:hover{
+            background-color: $nord14;
+            color: $nord1;
+        }
+    }
     &#delete{
         background-color: $nord11;
         color: $nord0;

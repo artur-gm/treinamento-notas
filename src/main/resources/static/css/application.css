@@ -11326,6 +11326,14 @@ body {
   background-color: #A3BE8C;
   color: #3B4252;
 }
+.my-btn#edit {
+  background-color: #88C0D0;
+  color: #2E3440;
+}
+.my-btn#edit:hover {
+  background-color: #A3BE8C;
+  color: #3B4252;
+}
 .my-btn#delete {
   background-color: #BF616A;
   color: #2E3440;
