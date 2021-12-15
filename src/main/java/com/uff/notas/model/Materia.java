@@ -20,5 +20,7 @@ public class Materia {
 
     @Column(name = "descricao")
     private String descricao;
+
+    //TODO: Validations
     
 }

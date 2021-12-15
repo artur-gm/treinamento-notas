@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/css/application.css" />
 </head>
 
-<body class="corpo">
+<body>
     <div class="container">
         <div layout:fragment="content">
         
@@ -16,6 +16,7 @@
             <a class="btn btn-primary my-btn" id="new" href="./new.html" th:href="@{/materia/new}" role="button" title="Adicionar matéria">Adicionar matéria</a>
         </div>
     </br>
+    <div class="card">
     <table class="table tabela" id="tabelaMaterias">
         <thead class="thead-light">
         <tr>
@@ -44,6 +45,7 @@
             </tbody>
 
     </table>
+    </div>
         
     </div>    
     </div>    

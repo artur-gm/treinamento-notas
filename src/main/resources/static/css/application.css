@@ -11281,7 +11281,7 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-.corpo {
+body {
   background-color: #2E3440;
   color: #D8DEE9;
 }
@@ -11298,6 +11298,17 @@ textarea.form-control-lg {
   box-shadow: none;
 }
 
+.card {
+  background-color: #3B4252;
+  box-shadow: 0 4px 8px 0 rgba(15, 17, 21, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  padding: 10px 16px;
+}
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(15, 17, 21, 0.2);
+}
+
 .my-btn {
   background-color: #8FBCBB;
   color: #2E3440;
@@ -11305,7 +11316,7 @@ textarea.form-control-lg {
 }
 .my-btn:hover {
   background-color: #E5E9F0;
-  color: #2E3440;
+  color: #3B4252;
 }
 .my-btn#new {
   background-color: #88C0D0;
@@ -11313,19 +11324,22 @@ textarea.form-control-lg {
 }
 .my-btn#new:hover {
   background-color: #A3BE8C;
-  color: #2E3440;
+  color: #3B4252;
 }
 .my-btn#delete {
   background-color: #BF616A;
   color: #2E3440;
 }
+.my-btn#delete:hover {
+  color: #3B4252;
+}
 
 .tabela {
   background-color: #3B4252;
   color: #D8DEE9;
-  border: 1px solid #434C5E;
+  border: hidden;
 }
 
-th, td {
-  border: 1px solid #434C5E;
+td {
+  border: hidden;
 }/*# sourceMappingURL=application.css.map */
