@@ -20,7 +20,7 @@ public class MateriaApi {
     @DeleteMapping(value = "/{id}")
     public void deletaMateria(@PathVariable("id") long idMateria){
 
-        mService.deletaMateria(idMateria);
+        mRepository.deleteById(idMateria);
 
     }
 
