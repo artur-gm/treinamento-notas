@@ -21,6 +21,10 @@ public class Materia {
     @Column(name = "descricao")
     private String descricao;
 
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "professor_id")
+    Professor professor;
+
     //TODO: Validations
     
 }
