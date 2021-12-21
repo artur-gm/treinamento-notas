@@ -15,7 +15,7 @@ import lombok.Setter;
 @Table(name = "Professor")
 public class Professor extends Usuario {
 
-    @OneToOne(mappedBy = "materia")
+    @OneToOne(mappedBy = "professor")
     private Materia materia;
     
 }
