@@ -20,7 +20,7 @@ public class UsuarioApi {
     @DeleteMapping(value = "/{id}")
     public void deletaUsuario(@PathVariable("id") long idUsuario){
 
-        uService.deletaUsuario(idUsuario);
+        uRepository.deleteById(idUsuario);
 
     }
 
