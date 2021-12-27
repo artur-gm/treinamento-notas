@@ -1,5 +1,7 @@
 package com.uff.notas.model;
 
+import java.util.Set;
+
 import javax.persistence.*;
 
 import lombok.*;
@@ -23,7 +25,10 @@ public class Materia {
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "professor_id")
-    Professor professor;
+    private Professor professor;
+    
+    @OneToMany(mappedBy = "materia")
+    private Set<Nota> notas;
 
     //TODO: Validations
     

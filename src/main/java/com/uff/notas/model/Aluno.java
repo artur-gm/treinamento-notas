@@ -1,7 +1,8 @@
 package com.uff.notas.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import java.util.Set;
+
+import javax.persistence.*;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -15,5 +16,12 @@ import lombok.Setter;
 public class Aluno extends Usuario {
     //TODO: Relations
 
+
+    @OneToMany(mappedBy = "aluno")
+    private Set<Nota> notas;
+
+    @ManyToOne
+    @JoinColumn(name="turma_id")
+    private Turma turma;
     
 }
